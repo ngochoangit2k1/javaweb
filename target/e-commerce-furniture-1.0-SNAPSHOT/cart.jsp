@@ -39,7 +39,8 @@ font-size: 25px;
 </style>
 </head>
 <body>
-	<%@include file="/includes/navbar.jsp"%>
+    <div class="container-fluid">
+        <%@include file="/includes/navbar.jsp"%>
 
 	<div class="container my-3">
 		<div class="d-flex py-3"><h3>Total Price: $ ${(total>0)?dcf.format(total):0} </h3> <a class="mx-3 btn btn-primary" href="CheckOutServlet">Check Out</a></div>
@@ -81,6 +82,8 @@ font-size: 25px;
 			</tbody>
 		</table>
 	</div>
+    </div>
+	
 
 	<%@include file="/includes/footer.jsp"%>
 </body>

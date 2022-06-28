@@ -1,0 +1,122 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 28, 2022, 9:32:02 AM
+    Author     : Lenovo
+*/
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+.img .img-inner {
+    position: relative;
+    overflow: hidden;
+}
+.img .img-inner:before, *:after{
+        box-sizing: border-box;
+}
+.box {
+  backgroud-color: #ddd;
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box:nth-child(2) {
+  left: 65%;
+}
+
+@media (max-width: 1024px) {
+  .box:nth-child(2) {
+    display: none;
+  }
+  .box {
+    left: 50%;
+  }
+}
+
+.box a:before {
+  content: attr(title);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  font-size: 25px;
+  z-index: 5;
+  pointer-events: none;
+  color: #fff;
+  font-weight: 900;
+}
+
+.box .image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: 50% 50%;
+  transition: 500ms ease;
+  -webkit-transition: 500ms ease;
+  -ms-transition: 500ms ease;
+  -moz-transition: 500ms ease;
+  -o-transition: 500ms ease;
+  background-size: auto 100%;
+}
+
+.box span {
+  width: 16.66666666666667%;
+  height: 16.66666666666667%;
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+
+.box span:hover ~ .image {
+  background-size: auto 200%;
+}
+
+
+
+body {
+  background: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+}
+
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}

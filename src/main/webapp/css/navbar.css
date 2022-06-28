@@ -1,0 +1,135 @@
+
+
+body {
+/*  display: flex;
+  flex-direction: column;
+  justify-content: center;*/
+/*  align-items: center;*/
+/*  position: relative;*/
+/*  min-height: 100vh;*/
+color: white;
+  font-family: Hack, monospace;
+}
+
+div {
+  color: #727272;
+  text-align: center;
+}
+
+p {
+    margin-top: -1px!important;
+  margin: 25px;
+  font-size: 20px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+p::before {
+  content: attr(data-item);
+  transition: all 1s ease-in-out;
+  color: #8254ff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+p:hover::before {
+  width: 100%;
+}
+
+nav {
+ 
+  background: #f9f9f9;
+  padding: 16px;
+}
+nav .menuItems {
+  list-style: none;
+  display: flex;
+}
+nav .menuItems li {
+  margin: 20px;
+}
+nav .menuItems li a {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+nav .menuItems li a::before {
+  content: attr(data-item);
+  transition: 0.5s;
+  color: #8254ff;
+  position: absolute;
+  top: -1.5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+nav .menuItems li a:hover::before {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+ .navbar-brand {
+    display: flex!important;
+    align-items: center!important;
+    color: rgba(0,0,0,.9);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 620px;
+  width: 100%;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  transition: 0.3s;
+  height: 60px;
+}
+.search > * {
+  border: none;
+  outline: none;
+}
+.search__input {
+  padding: 0 15px;
+  height: 100%;
+  width: calc(100% - 120px);
+  font-size: 18px;
+  box-sizing: border-box;
+}
+.search__input:not(:placeholder-shown) + .search__button {
+  transform: translateY(0px);
+}
+.search__input:placeholder-shown + .search__button {
+  transform: translateY(60px);
+}
+.search__button {
+  background: #333;
+  color: #feffd4;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100px;
+  height: calc(100% - 20px);
+  transition: 0.3s;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.search:focus-within {
+  transform: translateY(-4px);
+  border-color: #bbb;
+  box-shadow: 4px 4px 0 #ddd, 8px 8px 0 #fcff88;
+}
